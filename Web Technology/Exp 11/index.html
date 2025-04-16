@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced jQuery Effects</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            padding-top: 50px;
+        }
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: coral;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+        button {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>jQuery Effects Demo</h2>
+    <div id="box"></div>
+
+    <button id="hideBtn">Hide</button>
+    <button id="showBtn">Show</button>
+    <button id="fadeInBtn">Fade In</button>
+    <button id="fadeOutBtn">Fade Out</button>
+    <button id="slideUpBtn">Slide Up</button>
+    <button id="slideDownBtn">Slide Down</button>
+    <button id="animateBtn">Animate Box</button>
+    <button id="resetBtn">Reset</button>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#hideBtn").click(function(){
+                $("#box").hide(500);
+            });
+
+            $("#showBtn").click(function(){
+                $("#box").show(500);
+            });
+
+            $("#fadeInBtn").click(function(){
+                $("#box").fadeIn(1000);
+            });
+
+            $("#fadeOutBtn").click(function(){
+                $("#box").fadeOut(1000);
+            });
+
+            $("#slideUpBtn").click(function(){
+                $("#box").slideUp(800);
+            });
+
+            $("#slideDownBtn").click(function(){
+                $("#box").slideDown(800);
+            });
+
+            $("#animateBtn").click(function(){
+                $("#box").animate({
+                    width: '300px',
+                    height: '300px',
+                    opacity: 0.6,
+                    borderRadius: '50%',
+                    marginLeft: '100px'
+                }, 1000);
+            });
+
+            $("#resetBtn").click(function(){
+                $("#box").removeAttr("style").css({
+                    width: "200px",
+                    height: "200px",
+                    backgroundColor: "coral",
+                    margin: "20px auto",
+                    borderRadius: "10px",
+                    opacity: 1
+                }).show();
+            });
+
+        });
+    </script>
+
+</body>
+</html>

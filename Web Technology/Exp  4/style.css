@@ -1,0 +1,56 @@
+/* General Styling */
+body {
+    background: linear-gradient(90deg, rgb(185, 216, 71), rgb(143, 220, 172));
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Title Styling */
+.title {
+    color: blue;
+    padding-bottom: 20px;
+    font-size: 30px;
+    text-decoration: underline rgb(225, 17, 191);
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Card Styling */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    width: 340px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Text Styling */
+.card p {
+    font-size: 14px;
+    color: #333;
+    padding: 10px 5px;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

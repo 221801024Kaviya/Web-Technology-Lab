@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Selector Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .highlight {
+            color: white;
+            background-color: teal;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 id="title">Click the Button to Highlight Text</h2>
+    <p class="description">This is a sample paragraph using class selector.</p>
+    <button id="highlightBtn">Highlight</button>
+
+    <script>
+        $(document).ready(function(){
+            $("#highlightBtn").click(function(){
+                $(".description").addClass("highlight");
+                $("#title").text("Text Highlighted!");
+            });
+        });
+    </script>
+
+</body>
+</html>
